@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Getter @Setter
@@ -19,13 +20,6 @@ public class Organization
     private String businessLineCode;
     private String businessType;
     private String businessTypeCode;
-    private String businessLineCodeDescription;
-    private String purposeCode;
-    private String subIndustryCode;
-    private String sicDescription;
-    private String DUNSNumber;
-    private String NAICSCode;
-    private String NAICSCodeDescription;
     private List<String> taxExemptDocuments;
     private Boolean isCashOnly;
     private String preferredLanguage;
@@ -41,4 +35,5 @@ public class Organization
     private List<String> socialProfiles;
     private List<String> restrictedResellerInfo;
     private List<UUID> memberships;
+
 }

@@ -3,6 +3,8 @@ package com.sams.membership.nextgen.pojotesting.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter @Setter
 public class Phone
 {
@@ -15,4 +17,5 @@ public class Phone
     private String extension;
     private String textVerified;
     private Boolean isOkayToContact;
+
 }

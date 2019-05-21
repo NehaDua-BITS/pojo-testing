@@ -12,13 +12,14 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-public class PojoTest
+public class OpenPojoTest
 {
     private static final String POJO_PACKAGE = "com.sams.membership.nextgen.pojotesting.models";
 
     @Test
+    //@Ignore
     public void testPojoStructureAndBehavior() {
-        System.out.println("executing PojoTest class");
+        System.out.println("executing OpenPojoTest class");
         Validator validator = ValidatorBuilder.create()
                 // Add Rules to validate structure for POJO_PACKAGE
                 .with(new GetterMustExistRule())
@@ -30,6 +31,7 @@ public class PojoTest
 
         validator.validate(POJO_PACKAGE, new FilterPackageInfo());
 
+        //To test single class
         /*
         PojoClass pojoClass = PojoClassFactory.getPojoClass(Person.class);
         validator.validate(pojoClass);
