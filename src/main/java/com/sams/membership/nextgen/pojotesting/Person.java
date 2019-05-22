@@ -1,13 +1,9 @@
 package com.sams.membership.nextgen.pojotesting;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-@Getter @Setter
 public class Person
 {
     private String firstName;
@@ -20,21 +16,93 @@ public class Person
     private String namePrefix;
     private String nameSuffix;
     private LocalDate deceasedDate;
-    private Boolean isResident;
-    private Boolean isCashOnly;
 
-    public Person(String nameSuffix, LocalDate deceasedDate, Boolean isResident, Boolean isCashOnly) {
-        this.nameSuffix = nameSuffix;
-        this.deceasedDate = deceasedDate;
-        this.isResident = isResident;
-        this.isCashOnly = isCashOnly;
-    }
-
-    public Person(String firstName, String middleInitial, String lastName, String fullName) {
-        this.firstName = firstName;
+    public Person(String middleInitial, String lastName, String fullName) {
         this.middleInitial = middleInitial;
         this.lastName = lastName;
         this.fullName = fullName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+        //return middleInitial;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+        //this.lastName = lastName;
+    }
+
+    public String getMiddleInitial() {
+        return middleInitial;
+    }
+
+    public void setMiddleInitial(String middleInitial) {
+        this.middleInitial = middleInitial;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getGivenNameOne() {
+        return givenNameOne;
+    }
+
+    public void setGivenNameOne(String givenNameOne) {
+        this.givenNameOne = givenNameOne;
+    }
+
+    public String getGivenNameTwo() {
+        return givenNameTwo;
+    }
+
+    public void setGivenNameTwo(String givenNameTwo) {
+        this.givenNameTwo = givenNameTwo;
+    }
+
+    public String getGivenNameThree() {
+        return givenNameThree;
+    }
+
+    public void setGivenNameThree(String givenNameThree) {
+        this.givenNameThree = givenNameThree;
+    }
+
+    public String getNamePrefix() {
+        return namePrefix;
+    }
+
+    public void setNamePrefix(String namePrefix) {
+        this.namePrefix = namePrefix;
+    }
+
+    public String getNameSuffix() {
+        return nameSuffix;
+    }
+
+    public void setNameSuffix(String nameSuffix) {
+        this.nameSuffix = nameSuffix;
+    }
+
+    public LocalDate getDeceasedDate() {
+        return deceasedDate;
+    }
+
+    public void setDeceasedDate(LocalDate deceasedDate) {
+        this.deceasedDate = deceasedDate;
     }
 
     @Override
@@ -51,14 +119,12 @@ public class Person
                 Objects.equals(givenNameThree, person.givenNameThree) &&
                 Objects.equals(namePrefix, person.namePrefix) &&
                 Objects.equals(nameSuffix, person.nameSuffix) &&
-                Objects.equals(deceasedDate, person.deceasedDate) &&
-                Objects.equals(isResident, person.isResident) &&
-                Objects.equals(isCashOnly, person.isCashOnly);
+                Objects.equals(deceasedDate, person.deceasedDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, middleInitial, lastName, fullName, givenNameOne, givenNameTwo, givenNameThree, namePrefix, nameSuffix, deceasedDate, isResident, isCashOnly);
+        return Objects.hash(firstName, middleInitial, lastName, fullName, givenNameOne, givenNameTwo, givenNameThree, namePrefix, nameSuffix, deceasedDate);
     }
 
     @Override
@@ -74,8 +140,6 @@ public class Person
                 .add("namePrefix=" + namePrefix + "")
                 .add("nameSuffix=" + nameSuffix + "")
                 .add("deceasedDate=" + deceasedDate)
-                .add("isResident=" + isResident)
-                .add("isCashOnly=" + isCashOnly)
                 .toString();
     }
 }

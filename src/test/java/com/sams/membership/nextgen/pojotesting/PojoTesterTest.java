@@ -25,7 +25,5 @@ public class PojoTesterTest
                 .testing(Method.HASH_CODE)
                 .testing(Method.CONSTRUCTOR)
                 .areWellImplemented();
-
-
     }
 }

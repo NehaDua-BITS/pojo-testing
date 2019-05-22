@@ -3,8 +3,6 @@ package com.sams.membership.nextgen.pojotesting.models;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Objects;
-
 @Getter @Setter
 public class Phone
 {
