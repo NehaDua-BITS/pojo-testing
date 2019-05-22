@@ -17,15 +17,25 @@ public class Person
     private String nameSuffix;
     private LocalDate deceasedDate;
 
-    public Person(String middleInitial, String lastName, String fullName) {
+    public Person(String firstName, String middleInitial, String lastName, String fullName, String givenNameOne, String givenNameTwo, String givenNameThree) {
+        this.firstName = firstName;
         this.middleInitial = middleInitial;
         this.lastName = lastName;
         this.fullName = fullName;
+        this.givenNameOne = givenNameOne;
+        this.givenNameTwo = givenNameTwo;
+        this.givenNameThree = givenNameThree;
+    }
+
+    public Person(String firstName, String middleInitial, String lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
         return firstName;
-        //return middleInitial;
+        //return namePrefix;
     }
 
     public void setFirstName(String firstName) {

@@ -1,6 +1,7 @@
 package com.sams.membership.nextgen.pojotesting;
 
 import org.junit.Test;
+import pl.pojo.tester.api.ConstructorParameters;
 import pl.pojo.tester.api.DefaultPackageFilter;
 import pl.pojo.tester.api.assertion.Method;
 
@@ -20,10 +21,15 @@ public class PojoTesterTest
     @Test
     public void testPojoClass() {
         final Class<?> classUnderTest = Person.class;
+//        final Object[] parameters = {"neha", "dua", "savjani"};
+//        final Class[] parameterTypes = {String.class, String.class, String.class};
+//        final ConstructorParameters constructorParameters = new ConstructorParameters(parameters, parameterTypes);
+
         assertPojoMethodsFor(classUnderTest).testing(Method.GETTER, Method.SETTER, Method.TO_STRING)
                 .testing(Method.EQUALS)
                 .testing(Method.HASH_CODE)
                 .testing(Method.CONSTRUCTOR)
+                //.create(classUnderTest, constructorParameters)
                 .areWellImplemented();
     }
 }
