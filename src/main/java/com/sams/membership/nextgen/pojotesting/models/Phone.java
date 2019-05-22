@@ -14,6 +14,4 @@ public class Phone
     private Integer number;
     private String extension;
     private String textVerified;
-    private Boolean isOkayToContact;
-
 }
