@@ -35,12 +35,15 @@ public class Person
 
     public String getFirstName() {
         return firstName;
+        //return "walmart";
         //return namePrefix;
+        //return middleInitial;
     }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-        //this.lastName = lastName;
+        //this.firstName = "garbageValue";
+        //this.lastName = firstName;
     }
 
     public String getMiddleInitial() {
@@ -135,6 +138,7 @@ public class Person
     @Override
     public int hashCode() {
         return Objects.hash(firstName, middleInitial, lastName, fullName, givenNameOne, givenNameTwo, givenNameThree, namePrefix, nameSuffix, deceasedDate);
+        //return 100;
     }
 
     @Override
